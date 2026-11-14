@@ -1,0 +1,6 @@
+.DS_Store
+.claude/
+# After Effects: raw renders (several over GitHub's 100 MB limit), auto-saves and logs
+after-effects/renders/
+after-effects/Auto-Save/
+after-effects/*Logs/
