@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Before Language — 01: Perception</title>
+  <link rel="stylesheet" href="styles.css?v=23">
+</head>
+<body>
+  <main id="stage" aria-label="Perception: an interactive illustration about depersonalization. You sit facing a mirror and can step through it to see yourself from behind.">
+    <canvas id="view" aria-hidden="true"></canvas>
+
+    <div class="controls">
+      <button id="cross" class="ctl" type="button" aria-label="Step through the mirror" title="Step through the mirror">
+        <svg viewBox="0 0 40 40" aria-hidden="true">
+          <!-- a small arch: the mirror / the doorway -->
+          <path d="M12 31 V19 a8 8 0 0 1 16 0 V31" />
+        </svg>
+      </button>
+      <button id="camera" class="ctl" type="button"
+              aria-label="Use your camera to look around (stays on this device)"
+              title="Use your camera to look around (stays on this device)">
+        <svg viewBox="0 0 40 40" aria-hidden="true">
+          <!-- an eye -->
+          <path d="M9 20 C13 14 27 14 31 20 C27 26 13 26 9 20 Z" />
+          <circle cx="20" cy="20" r="3.2" />
+        </svg>
+      </button>
+    </div>
+
+    <p id="status" class="visually-hidden" aria-live="polite"></p>
+    <!-- the opening: a quiet threshold over a dimmed glimpse of the scene -->
+    <section id="opening" aria-labelledby="opening-title">
+      <div class="opening-inner">
+        <p class="series">Before Language</p>
+        <h1 id="opening-title" class="name">01 — Perception</h1>
+        <div class="progress" role="progressbar" aria-label="Loading the artwork" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span></span></div>
+        <div class="choices" hidden>
+          <button type="button" data-choice="camera" class="primary">Begin with your camera</button>
+          <button type="button" data-choice="mouse">Begin with the mouse</button>
+          <p class="note">Your camera image stays on this computer. Move your head to look; lean in toward the mirror. With the mouse, move to look and scroll to go on.</p>
+          <p class="rotate">Best seen with your phone turned sideways.</p>
+        </div>
+        <p class="error" hidden></p>
+      </div>
+    </section>
+    <pre id="debug" hidden></pre>
+  </main>
+
+  <script src="assets/manifest.js?v=23"></script>
+  <script src="assets/videos.js?v=23"></script>
+  <script src="assets/eyes/eyes.js?v=23"></script>
+  <script src="assets/textures.js?v=23"></script>
+  <script src="js/headtrack.js?v=23"></script>
+  <script src="js/main.js?v=23"></script>
+</body>
+</html>
